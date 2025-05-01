@@ -437,6 +437,15 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.inset-0 {
+  inset: 0px;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -446,6 +455,26 @@ video {
 }
 .flex {
   display: flex;
+}
+.hidden {
+  display: none;
+}
+.h-full {
+  height: 100%;
+}
+.w-full {
+  width: 100%;
+}
+.flex-shrink {
+  flex-shrink: 1;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .text-4xl {
   font-size: 2.25rem;
