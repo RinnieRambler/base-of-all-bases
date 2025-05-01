@@ -10,7 +10,13 @@
 </head>
 
 <body>
-    {{content}}
+    {% for block in page.blocks %}
+
+    <div class="scheme-{{block.scheme}}">
+        {% include /blocks/{{block.id}}.html %}
+    </div>
+
+    {% endfor %}
 </body>
 
 </html>
