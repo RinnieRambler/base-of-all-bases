@@ -437,8 +437,15 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 .block {
   display: block;
+}
+.flex {
+  display: flex;
 }
 .text-4xl {
   font-size: 2.25rem;
