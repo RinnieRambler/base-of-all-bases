@@ -1,6 +1,7 @@
 <section class="px-0">  
   <div class="tickerBanner" data-banner-speed="{{block.banner-style.speed}}">
     {% for message in block.banner-message %}
+    <img src="" alt="">
       <a href="{{message.url}}" class="text-block">{{message.text}}</a>
       {% endfor %}
   </div>
@@ -102,3 +103,15 @@ tickerBanners.forEach(banner => {
 })
 
 </script>
+
+<!--     - id: ticker-banner
+      banner-style:
+        direction: left
+        text-size:
+      banner-message: 
+      - text: Lorem ipsum dolor sit aliquam ut rem. 
+      - url: 
+      - text: Quo, quod iste reprehenderit sit 
+      - url:
+      - text: Illo accusamus quo ab totam
+      - url: -->

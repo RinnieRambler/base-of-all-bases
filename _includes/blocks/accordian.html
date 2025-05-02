@@ -4,11 +4,13 @@
 
   {% for faq in block.faq %}
 
-  <div class="question p-5 border-black border-2 {% if forloop.first %} {% else %} border-t-0 {% endif %}">
+  <div class="expandquestion question p-5 border-black border-2 {% if forloop.first %} {% else %} border-t-0 {% endif %} border-b-0">
     <h3>{{ faq.question }}</h3>
   </div>
-  <div class="answer max-h-0 overflow-hidden border-t-0 "> 
-    <h3>{{ faq.answer-html }}</h3>
+  <div class="answer max-h-0 overflow-hidden border-2 border-black border-t-0 ">
+    <div class="p-5">
+      <h3>{{ faq.answer-html }}</h3>
+    </div>
  </div>
 
  {% endfor %}
@@ -27,3 +29,28 @@
 }
 
 </style>
+
+<script>
+
+  const expandButtons = document.querySelectorAll(".expandquestion");
+  
+  function expand() {
+    
+    console.log(this.previousElementSibling)
+    console.log(this.nextElementSibling)
+  
+  if (this.nextElementSibling.style.maxHeight == "0px"){
+    this.nextElementSibling.style.maxHeight = '100vh'
+  } else {
+    this.nextElementSibling.style.maxHeight = '0'
+
+  }
+
+  
+  }
+  
+  expandButtons.forEach(button => {
+    button.addEventListener("click",expand);
+  })
+  
+  </script>
