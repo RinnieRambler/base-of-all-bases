@@ -39,6 +39,7 @@
     console.log(this.previousElementSibling)
     console.log(this.nextElementSibling)
   
+  // This if statement is to make the expand button close
   if (this.nextElementSibling.style.maxHeight == "0px"){
     this.nextElementSibling.style.maxHeight = '100vh'
   } else {
@@ -46,7 +47,6 @@
 
   }
 
-  
   }
   
   expandButtons.forEach(button => {
