@@ -37,11 +37,34 @@ blocks:
           answer-html: <p>Yes</p>
     - id: filterable-grid
       filter-buttons: 
-        - one
-        - two
-        - three
+        - old
+        - new
+        - modern
       grid-item:
-        - A
-        - B
-        - C
+        - image: https://picsum.photos/id/1076/600/400
+          alt:
+          caption:
+          category: old
+        - image: https://picsum.photos/id/1081/600/400
+          alt:
+          caption:
+          category: new
+        - image: https://picsum.photos/id/743/600/400
+          alt:
+          caption:
+          category: modern
+    - id: filterable-menu
+    filter-buttons: 
+      - vegan
+      - vegetarian
+      - gluten free 
+      - dairy free
+      - nut free
+    menu-item:
+      - dish: teriyaki tempeh
+        category: vegan 'gluten free' 'dairy free'
+      - dish: shakshuka
+        category: vegetarian 
+      - dish: 
+        category: modern
 ---
