@@ -1,0 +1,17 @@
+<section >
+  <!-- 1 div for filter menu -->
+  
+  <div>
+    {% for button in block.filter-buttons %}
+    <div>{{button}}</div>
+    {% endfor %}
+  </div>
+  
+  <!-- 1 div for list of things we're filtering -->
+  
+  <div>
+    {% for item in block.grid-item %}
+    <div>content</div>
+    {% endfor %}
+  </div>
+</section>
