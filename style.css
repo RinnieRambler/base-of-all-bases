@@ -18,3 +18,11 @@ section{
 .max-width{
     max-width: 1000px;
 }
+
+.expandButton span {
+    transition: all 3s;
+  }
+  
+.expandButton.active span{
+    transform: rotate(45deg);
+  }

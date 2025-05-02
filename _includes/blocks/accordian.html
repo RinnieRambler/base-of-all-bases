@@ -4,11 +4,11 @@
 
   {% for faq in block.faq %}
 
-  <div class="expandquestion question p-5 border-black border-2 {% if forloop.first %} {% else %} border-t-0 {% endif %} border-b-0">
-    <h3>{{ faq.question }}</h3>
+  <div class="expandquestion question p-5 border-black border-2 {% if forloop.first %} {% else %} border-t-0 {% endif %} border-b-0" style="max-h-0">
+    <h3 class="relative">{{ faq.question }} <div class="faq-icon absolute top-2 right-0"><span class="border-b border-black block w-4"></span><span class="border-b border-black block w-4 rotate-90"></span></div></h3>
   </div>
-  <div class="answer max-h-0 overflow-hidden border-2 border-black border-t-0 ">
-    <div class="p-5">
+  <div class=" max-h-0 overflow-hidden border-2 border-black border-t-0 transition-all duration-1000">
+    <div class="p-5 answer-content clientHeight">
       <h3>{{ faq.answer-html }}</h3>
     </div>
  </div>
@@ -28,6 +28,15 @@
   height: 0;
 }
 
+#section-{{forloop-index}} .faq-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.expandquestion.active .rotate-90{
+  transform: rotate(0deg);
+}
+
 </style>
 
 <script>
@@ -35,13 +44,18 @@
   const expandButtons = document.querySelectorAll(".expandquestion");
   
   function expand() {
+
+    this.classList.toggle("active")
     
     console.log(this.previousElementSibling)
     console.log(this.nextElementSibling)
+
+   let targetHeight = this.nextElementSibling.querySelector('.answer-content').clientHeight
+
   
   // This if statement is to make the expand button close
   if (this.nextElementSibling.style.maxHeight == "0px"){
-    this.nextElementSibling.style.maxHeight = '100vh'
+    this.nextElementSibling.style.maxHeight = targetHeight + 'px'
   } else {
     this.nextElementSibling.style.maxHeight = '0'
 
