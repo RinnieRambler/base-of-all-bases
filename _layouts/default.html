@@ -29,10 +29,11 @@
 
 </style>
 
-    {% for block in page.blocks %}
+{% include /header/nav-drop-down.html %}
+
+{% for block in page.blocks %}
 
     <div class="scheme-{{block.scheme-color}}">
-        {% include /header/nav-logo-left.html %}
         {% include /blocks/{{block.id}}.html %}
     </div>
 

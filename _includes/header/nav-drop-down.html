@@ -6,20 +6,21 @@
       <nav class="" >
         {% for link in site.data.navigation.header-links %}
           {% if link.sublinks %}
-          <span>
+          <span class="relative group">
             
           {% endif %}
             <a href="{{link.url}}">{{link.text}}</a>
           {% if link.sublinks %}
           <!-- container for sublinks -->
-          <div>
+          <div class="absolute top-4 left-0 z-10 bg-white hidden group-hover:block">
             {% for sublink in link.sublinks %}
-            <a>{{sublink.text}}</a>
+            <a class="p-2 whitespace-pre">{{sublink.text}}</a>
             {% endfor %}
           </div>
           </span>
           {% endif %}
         {% endfor %}
+
       </nav>
     </div>
   </div>
