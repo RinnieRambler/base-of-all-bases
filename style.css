@@ -13,16 +13,21 @@
 
 section{
     padding: 5%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
+
+/* buttons themes */
+
+.button{
+    border: 1px solid var(--colored-button-border);
+    background-color: var(--colored-button-bg);
+    color: var(--colored-button-text);
+}
+
+.button.featured
 
 .max-width{
     max-width: 1000px;
 }
 
-.expandButton span {
-    transition: all 3s;
-  }
-  
-.expandButton.active span{
-    transform: rotate(45deg);
-  }
