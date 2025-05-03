@@ -1,0 +1,26 @@
+<header>
+  <div class="max-width ">
+    <div class="flex justify-between">
+
+      <a><h2>I am a badass navigator</h2></a>
+      <nav class="" >
+        {% for link in site.data.navigation.header-links %}
+          {% if link.sublinks %}
+          <span>
+            
+          {% endif %}
+            <a href="{{link.url}}">{{link.text}}</a>
+          {% if link.sublinks %}
+          <!-- container for sublinks -->
+          <div>
+            {% for sublink in link.sublinks %}
+            <a>{{sublink.text}}</a>
+            {% endfor %}
+          </div>
+          </span>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</header>
