@@ -494,6 +494,9 @@ video {
 .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.justify-between {
+    justify-content: space-between;
+}
 .gap-4 {
     gap: 1rem;
 }
@@ -544,7 +547,7 @@ video {
 
 /* Custom CSS */
 
-section{
+section, header, footer {
     padding: 5%;
     background-color: var(--bg-color);
     color: var(--text-color);

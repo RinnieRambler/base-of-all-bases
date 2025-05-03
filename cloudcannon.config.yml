@@ -42,6 +42,10 @@ _inputs:
     type: text
     hidden: true
     cascade: true
+  id: 
+    type: text
+    hidden: true
+    cascade: true
   block-content-html:
     type: html
     options:
@@ -49,7 +53,6 @@ _inputs:
       allow_custom_markup: false
       remove_custom_markup: false
       initial_height: 320
-      italic: true
       format: p h1 h2 h3 a img
       italic: true
       bold: true
@@ -67,8 +70,8 @@ _inputs:
     options:
       allow_empty: true
       values:
-        50vh: half screen min-min
-        75vh: three quater screen min-min
+        50vh: half screen min-height
+        75vh: three quater screen min-height
         90vh: just short of full screen
         100vh: full screen
     cascade: true
@@ -88,13 +91,10 @@ _structures:
     values:
       - label: text block
         value:
-          _id: rich_text_block
-          block-content-html: <h1>Let’s CREATE Something</i> BEAUTIFUL Together</h1>
+          text_html: <h1>Let’s CREATE Something</i> BEAUTIFUL Together</h1>
           text-alignment: center
           scheme:
             scheme-color: base
-            scheme-padding: small-padding
-            scheme-max-width: L
           gradient:
             has-gradient: false
             color_percent_change_point: 60%
