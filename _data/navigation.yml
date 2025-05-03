@@ -1,7 +1,9 @@
-header-links: 
-    - text: home
-      url: /index
-    - text: about
-      url: /about
-    - text: contact
-      url: /contact
+header-links:
+  - text: home
+    url: /index
+  - text: about
+    url: /about
+  - text: contact
+    url: /contact
+  - text: dan was here
+    url: /coolPlace
