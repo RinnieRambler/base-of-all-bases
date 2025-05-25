@@ -1,8 +1,11 @@
 <section id="section-{{forloop.index}}">
   <div class="max-width mx-auto">
-    <div class="flex content-mover">
+    <div class="flex content-mover grid-gols-2">
       <div class="content-block">
         {{block.text_html}}
+      </div>
+      <div>
+        <img src="{{block.image}}" width="400" height="600">
       </div>
     </div>
   </div>
@@ -24,11 +27,3 @@
 
 
 </style>
-
-<!-- id: text-block
-      text_html: <h1>Welcome to your homepage! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum itaque qui obcaecati voluptatem quaerat facere, nesciunt eaque molestiae, cum, animi iure nulla assumenda maxime sequi consectetur sed adipisci mollitia alias?</h1>
-      height: 100vh
-      width: 33%
-      alignment: center
-      placement: center
-      text-align: center -->
