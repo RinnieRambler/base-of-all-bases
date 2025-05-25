@@ -1,12 +1,12 @@
 <section id="section-{{forloop.index}}">
-  <div class="max-width mx-auto">
-    <div class="flex content-mover grid-gols-2">
+  <div class="max-width mx-auto grid grid-gols-2">
+    <div class="flex content-mover ">
       <div class="content-block">
         {{block.text_html}}
       </div>
-      <div>
-        <img src="{{block.image}}" width="400" height="600">
-      </div>
+    </div>
+    <div>
+      <img src="{{block.image}}" width="400" height="600">
     </div>
   </div>
 </section>
@@ -23,7 +23,6 @@
   #section-{{forloop.index}} .content-block {
     width:{{block.width}};
   }
-
 
 
 </style>
