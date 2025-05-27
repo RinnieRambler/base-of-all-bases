@@ -12,7 +12,7 @@
 /* Custom CSS */
 
 section, header, footer {
-    padding: 5%;
+    padding: 2rem 2%;
     background-color: var(--bg-color);
     color: var(--text-color);
 }

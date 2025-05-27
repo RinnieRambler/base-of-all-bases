@@ -58,7 +58,7 @@
 <!-- outputting blocks from page front matter -->
 
 {% for block in page.blocks %}
-
+<!-- {{block.id}} -->
     <div class="scheme-{{block.scheme-color}}">
         {% include /blocks/{{block.id}}.html %}
     </div>
@@ -87,6 +87,8 @@
     // scripts for scripts that vary content each time
     
 {% for block in page.blocks %}
+
+
 
     {% if block.id == "slider/slider-carousel" %}
 
